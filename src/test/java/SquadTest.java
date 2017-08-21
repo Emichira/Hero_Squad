@@ -42,7 +42,7 @@ public class SquadTest {
          assertEquals(Squad.all().size(), 0);
        }
 
-       //assigns our squads unique id attributes
+       //assigns our squads unique id's
        @Test
        public void getId_categoriesInstantiateWithAnId_1() {
          assertEquals(1, mySquad.getId());
