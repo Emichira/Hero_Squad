@@ -3,23 +3,27 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class SquadTest {
-  private Squad mSquad;
+  private Squad mySquad;
   @Before
     public void instantiate() {
-      mSquad = new Squad("Wazito");
+      mySquad = new Squad("Wazito");
     }
+  @After
+     public void tearDown() {
+       Squad.clear();
+     }
 
   //asserts if instances can be created succefully
     @Test
     public void Squad_instantiatesCorrectly_true() {
-      Squad mSquad = new Squad("Wazito");
-    assertEquals(true, mSquad instanceof Squad);
+      Squad mySquad = new Squad("Wazito");
+    assertEquals(true, mySquad instanceof Squad);
     }
 
   //ensure we can assign squad a name and retrive it
     @Test
     public void Name_categoryInstantiatesWithName_String() {
-    assertEquals("Wazito", mSquad.getName());
+    assertEquals("Wazito", mySquad.getName());
     }
 
     //Retrives all instances of a class
@@ -41,7 +45,7 @@ public class SquadTest {
        //assigns our squads unique id attributes
        @Test
        public void getId_categoriesInstantiateWithAnId_1() {
-         assertEquals(1, mSquad.getId());
+         assertEquals(1, mySquad.getId());
        }
 
 }

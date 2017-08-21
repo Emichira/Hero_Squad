@@ -5,11 +5,13 @@ import java.util.List;
 public class Squad {
   private String mName;
   private static List<Squad> instances = new ArrayList<Squad>();
+  private int mId;
 
 
   public Squad(String name) {
     mName = name;
     instances.add(this);
+    mId = instances.size();
 
   }
 
@@ -26,6 +28,10 @@ public class Squad {
   //implements clear() method inour ArrayList
    public static void clear() {
      instances.clear();
+   }
+
+   public int getId() {
+     return mId;
    }
 
 }
