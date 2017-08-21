@@ -22,16 +22,20 @@ public class Squad {
 
   //implements all()
   public static List<Squad> all() {
-     return instances;
-   }
+    return instances;
+  }
 
   //implements clear() method inour ArrayList
-   public static void clear() {
-     instances.clear();
-   }
+  public static void clear() {
+    instances.clear();
+  }
 
-   public int getId() {
-     return mId;
-   }
+  public int getId() {
+    return mId;
+  }
+
+  public static Squad find(int id) {
+    return instances.get(id - 1);
+  }
 
 }

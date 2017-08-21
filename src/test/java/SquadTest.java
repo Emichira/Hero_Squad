@@ -48,4 +48,12 @@ public class SquadTest {
          assertEquals(1, mySquad.getId());
        }
 
+       //finds specific squad using unique ids
+       @Test
+        public void find_returnsSquadWithSameId_secondSquad() {
+          Squad firstSquad = new Squad("Morans");
+          Squad secondSquad = new Squad("Wanyore");
+          assertEquals(Squad.find(secondSquad.getId()), secondSquad);
+        }
+
 }
