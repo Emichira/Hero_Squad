@@ -23,4 +23,9 @@ public class Squad {
      return instances;
    }
 
+  //implements clear() method inour ArrayList
+   public static void clear() {
+     instances.clear();
+   }
+
 }

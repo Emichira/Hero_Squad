@@ -8,10 +8,6 @@ public class SquadTest {
     public void instantiate() {
       mSquad = new Squad("Wazito");
     }
-  // @After
-  //  public void tearDown() {
-  //    Squad.clear();
-  //  }
 
   //asserts if instances can be created succefully
     @Test
@@ -34,5 +30,12 @@ public class SquadTest {
        assertEquals(true, Squad.all().contains(squadOne));
        assertEquals(true, Squad.all().contains(squadTwo));
      }
+
+     //clearing the instances ArrayList
+      @Test
+       public void clear_emptiesAllSquadsFromList_0() {
+         Squad.clear();
+         assertEquals(Squad.all().size(), 0);
+       }
 
 }
