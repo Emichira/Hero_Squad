@@ -17,4 +17,13 @@ public class HeroTest {
         Hero testHero = new Hero("Wanyore");
         assertEquals("Wanyore", testHero.getName());
       }
+
+      //Retrives all instances of hero
+      @Test
+      public void all_returnsAllInstancesOfHero_true() {
+        Hero firstHero = new Hero("Wanyore");
+        Hero secondHero = new Hero("Wazito");
+        assertEquals(true, Hero.all().contains(firstHero));
+        assertEquals(true, Hero.all().contains(secondHero));
+      }
 }
