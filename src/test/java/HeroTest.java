@@ -34,4 +34,11 @@ public class HeroTest {
         Hero.clear();
         assertEquals(Hero.all().size(), 0);
       }
+
+      //ensure we can assign our hero's unique id attributes
+      @Test
+      public void getId_herosInstantiateWithAnID_4() {
+        Hero testHero = new Hero("Home");
+        assertEquals(4, testHero.getId());
+      }
 }

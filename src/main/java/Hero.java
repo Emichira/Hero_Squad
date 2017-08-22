@@ -10,6 +10,8 @@ public class Hero {
   public Hero(String name) {
     mName = name;
     instances.add(this);
+    mId = instances.size();
+
   }
 
   public String getName() {
@@ -23,5 +25,9 @@ public class Hero {
   public static void clear() {
     instances.clear();
   }
+
+  public int getId() {
+     return mId;
+   }
 
 }
