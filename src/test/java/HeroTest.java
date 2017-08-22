@@ -37,8 +37,16 @@ public class HeroTest {
 
       //ensure we can assign our hero's unique id attributes
       @Test
-      public void getId_herosInstantiateWithAnID_4() {
+      public void getId_herosInstantiateWithAnID_6() {
         Hero testHero = new Hero("Home");
-        assertEquals(4, testHero.getId());
+        assertEquals(6, testHero.getId());
+      }
+
+      //locate specific Hero based on unique id
+      @Test
+      public void find_returnHeroWithSameId_secondHero() {
+        Hero firstHero = new Hero("Wanyore");
+        Hero secondHero = new Hero("Wazito");
+        assertEquals(Hero.find(secondHero.getId()),secondHero);
       }
 }

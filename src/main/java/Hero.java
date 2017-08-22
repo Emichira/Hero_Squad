@@ -30,4 +30,8 @@ public class Hero {
      return mId;
    }
 
+   public static Hero find(int id) {
+     return instances.get(id - 1);
+   }
+
 }
