@@ -26,4 +26,12 @@ public class HeroTest {
         assertEquals(true, Hero.all().contains(firstHero));
         assertEquals(true, Hero.all().contains(secondHero));
       }
+
+      //empties the instances ArrayList
+      @Test
+      public void clear_emptiesAllHerosFromArrayList_0() {
+        Hero firstHero = new Hero("Wanyore");
+        Hero.clear();
+        assertEquals(Hero.all().size(), 0);
+      }
 }
