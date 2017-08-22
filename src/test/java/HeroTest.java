@@ -3,6 +3,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class HeroTest {
+  @After
+ public void tearDown() {
+   Hero.clear();
+ }
 
   //test if we can successfully create instances of this class
     @Test
