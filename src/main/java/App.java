@@ -22,18 +22,18 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/squads", (request, response) -> {
-      Map<String, Object> model = new HashMap<String, Object>();
-      model.put("squads", Squad.all());
-      model.put("template", "templates/squads.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
-
     post("/squads", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String name = request.queryParams("name");
       Squad newSquad = new Squad(name);
       model.put("template", "templates/squad-success.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/squads", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("squads", Squad.all());
+      model.put("template", "templates/squads.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 

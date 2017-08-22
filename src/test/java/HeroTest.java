@@ -49,4 +49,5 @@ public class HeroTest {
         Hero secondHero = new Hero("Wazito");
         assertEquals(Hero.find(secondHero.getId()),secondHero);
       }
+
 }

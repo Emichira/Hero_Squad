@@ -7,6 +7,7 @@ public class Hero {
   private static List<Hero> instances = new ArrayList<Hero>();
   private int mId;
 
+
   public Hero(String name) {
     mName = name;
     instances.add(this);
@@ -33,5 +34,6 @@ public class Hero {
    public static Hero find(int id) {
      return instances.get(id - 1);
    }
+
 
 }
