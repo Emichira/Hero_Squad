@@ -55,14 +55,13 @@ public class App {
 
     post("/heroes", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-
       Squad squad = Squad.find(Integer.parseInt(request.queryParams("squadId")));
-
       String name = request.queryParams("name");
-      Hero newhero = new Hero(name);
-
+      int age = Integer.parseInt(request.queryParams("age"));
+      String superpower = request.queryParams("superpower");
+      String weakness = request.queryParams("weakness");
+      Hero newhero = new Hero(name, age, superpower, weakness);
       squad.addHero(newhero);
-
       model.put("squad", squad);
       model.put("template", "templates/squad-heroes-success.vtl");
       return new ModelAndView(model, layout);
