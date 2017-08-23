@@ -95,7 +95,7 @@ public class App {
       Hero newhero = new Hero(name, age, superpower, weakness);
       squad.addHero(newhero);
       model.put("squad", squad);
-      model.put("template", "templates/squad-heroes-success.vtl");
+      model.put("template", "templates/heroes-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
