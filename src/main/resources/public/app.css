@@ -1,0 +1,26 @@
+.index {
+  background-image: url(/images/black-panther.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 657px;
+}
+
+.head {
+  margin-left: 80px;
+  padding-top: 30px;
+  color: #428bca;
+}
+
+.links {
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: 0px 0px 20px #000000;
+  border-radius: 10px;
+  margin-left: 35px;
+  margin-top: 25px;
+  width: 265px;
+  background-color: aquamarine;
+  color: #428bca;
+  text-align: center;
+}
