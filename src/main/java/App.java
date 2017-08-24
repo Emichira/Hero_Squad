@@ -72,7 +72,7 @@ public class App {
     int age = Integer.parseInt(request.queryParams("age"));
     String superpower = request.queryParams("superpower");
     String weakness = request.queryParams("weakness");
-    Hero userHero = new Hero(name, age, superpower, weakness);
+    Hero newHero = new Hero(name, age, superpower, weakness);
     model.put("template", "templates/success.vtl");
     return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -92,10 +92,10 @@ public class App {
       int age = Integer.parseInt(request.queryParams("age"));
       String superpower = request.queryParams("superpower");
       String weakness = request.queryParams("weakness");
-      Hero newhero = new Hero(name, age, superpower, weakness);
-      squad.addHero(newhero);
+      Hero newHero = new Hero(name, age, superpower, weakness);
+      squad.addHero(newHero);
       model.put("squad", squad);
-      model.put("template", "templates/heroes-success.vtl");
+      model.put("template", "templates/hero-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 

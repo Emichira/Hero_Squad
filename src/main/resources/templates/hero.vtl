@@ -1,16 +1,12 @@
-<h1>$squad.getName() heroes:</h1>
+#if ($heroes)
 
-<ul>
-#foreach ($hero in $squad.getHeroes())
+<h1>$heroes.getName()</h1>
+<h4>Age: $heroes.getAge()</h4>
+<h4>Super Power: $heroes.getSuperpower()</h4>
+<h4>Weakness: $heroes.getWeakness()</h4>
 
-$hero.getName() $hero.getCreatedAt()
-<h2>$hero.getAge()</h2>
-<h2>$hero.getSpower()</h2>
-<h2>$hero.getWeakness()</h2>
-<br>
 #end
-</ul>
 
-
-<a href="/squads/$squad.getId()/heroes/new">ADD a NeW Hero</a>
-<a href="/squad">ALL SQUADS</a>
+<a href="/squads">All Squads</a>
+<br>
+<a href="/heroes">All Heroes</a>
