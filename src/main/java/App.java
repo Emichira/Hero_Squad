@@ -99,22 +99,5 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-  //   post("/heroes", (request, response) -> {
-  //   Map<String, Object> model = new HashMap<String, Object>();
-   //
-  //   ArrayList<Hero> heroes = request.session().attribute("heroes");
-  //   if (heroes == null) {
-  //     heroes = new ArrayList<Hero>();
-  //     request.session().attribute("heroes", heroes);
-  //   }
-   //
-  //   String description = request.queryParams("squadId");
-  //   Hero newHero = new Hero(description);
-  //   heroes.add(newHero);
-   //
-  //   model.put("template", "templates/success.vtl");
-  //   return new ModelAndView(model, layout);
-  //  }, new VelocityTemplateEngine());
-
     }
 }

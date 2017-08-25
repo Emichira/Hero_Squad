@@ -1,7 +1,11 @@
+<div class="heroes"
+<div class="allHeads">
 <h1>ALL HEROES</h1>
+</div>
 <ul>
   #foreach ($hero in $heroes)
     <li><a href="/heroes/$hero.getId()">$hero.getName()</a></li>
   #end
 </ul>
 <a href="/squads">View Squads</a>
+</div>

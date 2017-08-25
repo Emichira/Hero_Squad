@@ -24,3 +24,43 @@
   color: #428bca;
   text-align: center;
 }
+
+/*All Squads*/
+.squads {
+  background-image: url(images/DC.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 657px;
+}
+
+/*All Heroes*/
+.success {
+  background-image: url(/images/art.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 657px;
+  text-align: center;
+}
+
+.success-head {
+  margin-left: 80px;
+  padding-top: 30px;
+  color: #428bca;
+}
+
+.allHeads {
+  text-align: center;
+  margin: 50px;
+}
+/*Add A Squad*/
+.formsquad {
+  background-image: url(images/art.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 657px;
+  padding-top: 210px;
+  padding-left: 245px;
+}
